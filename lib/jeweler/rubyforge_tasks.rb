@@ -74,7 +74,7 @@ class Jeweler
                             raise "Unsure what to run to generate documentation. Please set doc_task and re-run."
                           end
 
-              sh %{rsync --archive --verbose --delete #{local_dir}/ #{host}:#{remote_dir}}
+              system %{rsync --archive --verbose --delete #{local_dir}/ #{host}:#{remote_dir}}
             end
           end
         end

@@ -10,7 +10,7 @@ class Jeweler
       def run
         command = "gem push #{@gemspec_helper.gem_path}"
         output.puts "Executing #{command.inspect}:"
-        sh command
+        system command
       end
 
       def self.build_for(jeweler)
